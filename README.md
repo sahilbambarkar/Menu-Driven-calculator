@@ -19,5 +19,5 @@ This calculator can perform the following calculations:
 The calculator is designed to be user-friendly and easy to navigate, making it a valuable tool for a wide range of financial and mathematical calculations.
 
 
-<b> download or clone the repoistory</b>
-<h3> go to index.html and run it to see various calculations</h3>
+<h1><b> Download or clone the repoistory</b></h1>
+<h3> Go to index.html and run it to see various calculations</h3>
