@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest and Number Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <!-- Interest Calculation Grid -->
+        <div class="grid" id="interest-grid">
+            <h1>Interest Calculator</h1>
+            <div class="input-group">
+                <label for="principal">Enter the principal:</label>
+                <input type="number" id="principal" />
+            </div>
+            <div class="input-group">
+                <label for="rate">Enter the rate (%):</label>
+                <input type="number" id="rate" />
+            </div>
+            <div class="input-group">
+                <label for="time">Enter the time (years):</label>
+                <input type="number" id="time" />
+            </div>
+            <div class="operation-group">
+                <label for="operation">Choose the operation:</label>
+                <select id="operation">
+                    <option value="simple">Simple Interest</option>
+                    <option value="compound">Compound Interest</option>
+                </select>
+            </div>
+            <div class="input-group" id="compound-group" style="display: none;">
+                <label for="compounded">Number of times interest is compounded per year:</label>
+                <input type="number" id="compounded" />
+            </div>
+            <button id="calculate-button">Calculate</button>
+            <div id="result"></div>
+        </div>
+
+        <!-- Number Operations Grid -->
+        <div class="grid" id="number-grid">
+            <h1>Number Operations</h1>
+            <div class="input-group">
+                <label for="number">Enter a number:</label>
+                <input type="number" id="number" />
+            </div>
+            <div class="operation-group">
+                <label for="number-operation">Choose the operation:</label>
+                <select id="number-operation">
+                    <option value="oddEven">Odd/Even</option>
+                    <option value="factorial">Factorial</option>
+                    <option value="fibonacci">Fibonacci</option>
+                    <option value="prime">Prime Number</option>
+                </select>
+            </div>
+            <button id="number-button">Calculate</button>
+            <div id="number-result"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Sahil Bambarkar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

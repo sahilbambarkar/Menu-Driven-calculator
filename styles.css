@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #283048, #859398);
+    color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    transform-style: preserve-3d;
+}
+
+.grid {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+    transform: rotateY(0);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s;
+}
+
+.grid:hover {
+    transform: rotateY(360deg);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #EDE574;
+}
+
+.input-group,
+.operation-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input,
+select {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+}
+
+button {
+    background-color: #FFC371;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #FF5F6D;
+    transform: scale(1.05);
+}
+
+#result,
+#number-result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #EDE574;
+    animation: resultAnimation 3s infinite;
+}
+
+@keyframes resultAnimation {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    25% {
+        transform: rotateX(15deg) rotateY(15deg);
+    }
+
+    50% {
+        transform: rotateX(0) rotateY(30deg);
+    }
+
+    75% {
+        transform: rotateX(-15deg) rotateY(15deg);
+    }
+
+    100% {
+        transform: rotateX(0) rotateY(0);
+    }
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #F7F7F7;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid #FFC371;
+    position: relative;
+    bottom: 0;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 16px;
+}
